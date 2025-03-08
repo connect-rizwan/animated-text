@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class ChatListScreen extends StatelessWidget {
   const ChatListScreen({super.key});
 
@@ -95,7 +93,7 @@ class ChatListScreen extends StatelessWidget {
       offset: const Offset(0, 0),
       position: PopupMenuPosition.under,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-      color: Color(0xFF2D2D2D),
+      color: const Color(0xFF2D2D2D),
       constraints: const BoxConstraints(
         minWidth: 200,
         maxWidth: 200,
@@ -103,7 +101,7 @@ class ChatListScreen extends StatelessWidget {
       itemBuilder: (context) => [
         _buildMenuItem('Unread', Icons.mail_outline),
         _buildMenuItem('Favorites', Icons.star_border),
-        PopupMenuItem<String>(
+        const PopupMenuItem<String>(
           padding: EdgeInsets.zero,
           child: ContractsSubmenuButton(),
         ),
@@ -194,11 +192,13 @@ class ChatListScreen extends StatelessWidget {
 }
 
 class ContractsSubmenuButton extends StatelessWidget {
+  const ContractsSubmenuButton({super.key});
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<String>(
       position: PopupMenuPosition.over,
-      color: Color(0xFF2D2D2D),
+      color: const Color(0xFF2D2D2D),
       offset: const Offset(-0, -0),
       constraints: const BoxConstraints(
         minWidth: 200,
@@ -214,7 +214,8 @@ class ContractsSubmenuButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Row(
           children: [
-            Icon(Icons.description_outlined, color: Colors.white, size: 20),
+            const Icon(Icons.description_outlined,
+                color: Colors.white, size: 20),
             const SizedBox(width: 12),
             const Text(
               'Contracts',

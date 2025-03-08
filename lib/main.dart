@@ -1,3 +1,4 @@
+import 'package:animated_text/double_popup_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -35,7 +36,7 @@ class _PaintDemoAppState extends State<PaintDemoApp> {
     return const Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: AnimatedTextBody(),
+        child: ChatListScreen(),
       ),
     );
   }
